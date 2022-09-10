@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+
+RUN apt-get -y install apache2
+
+COPY FROM centos:latest
+
+MAINTAINER NewstarCorporation
+
+RUN yum -y install httpd
+
+COPY index.html /var/www/html/ index.html /var/www/html/
